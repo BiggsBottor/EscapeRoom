@@ -12,7 +12,15 @@ import { LobbyComponent } from './components/lobby/lobby.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, GamesComponent, LoginComponent, RegisterComponent, ContactComponent, AboutComponent, GameComponent, LobbyComponent],
+  declarations: [
+    HomeComponent,
+    GamesComponent,
+    LoginComponent,
+    RegisterComponent,
+    ContactComponent,
+    AboutComponent,
+    GameComponent,
+    LobbyComponent],
   imports: [
     CommonModule
   ]
