@@ -1,0 +1,50 @@
+/* FOOTER */
+footer {
+	background: var(--dark);
+	padding: 80px 0 40px;
+	.list_title {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		font-weight: 600;
+		color: #fff;
+	}
+	.list_link {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		a {
+			color: #666;
+			font-size: 16px;
+			&:hover {
+				color: var(--green);
+				text-decoration: underline !important;
+			}
+		}
+	}
+	.copyright {
+		border-top: 1px solid rgba(255, 255, 255, .05);
+		p {
+			font-size: 15px;
+			color: #666;
+			font-weight: 400;
+			a {
+				color: #666;
+				&:hover {
+					color: var(--green);
+				}
+			}
+		}
+		.links {
+			.link {
+				margin-bottom: 10px;
+				a {
+					color: #666;
+					&:hover {
+						color: var(--green);
+					}
+				}
+			}
+		}
+	}
+}
+

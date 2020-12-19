@@ -1,18 +1,27 @@
-<div class="container" [ngClass]="{'sign-up-mode': signUpMode}">
+<div class="login-container" [ngClass]="{'sign-up-mode': signUpMode}">
   <div class="forms-container">
+    <!-- TODO: login or register with social media -->
       <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit('l')" class="sign-in-form">
               <h2 class="title">Login</h2>
               <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Username" />
-              </div>
+                  <input formControlName="user" type="text" placeholder="Username" />
+                </div>
+                <div *ngIf="isLoginSend && lf.user.errors" >
+                  <small *ngIf="lf.user.errors.required"  class="is-invalid">
+                    Se requiere el nombre de usuario
+                  </small>
+                  <small *ngIf="lf.user.errors.minlength"  class="is-invalid">
+                    Se requieren al menos 3 caracteres
+                  </small>
+                </div>
               <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Password" />
+                  <input formControlName="pswd" type="password" placeholder="Password" />
               </div>
               <input type="submit" value="Login" class="btn solid" />
-              <p class="social-text">Or login with social platforms</p>
+              <!-- <p class="social-text">Or login with social platforms</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
                       <i class="fab fa-google"></i>
@@ -20,24 +29,24 @@
                   <a href="#" class="social-icon">
                       <i class="fab fa-linkedin-in"></i>
                   </a>
-              </div>
+              </div> -->
           </form>
-          <form action="#" class="sign-up-form">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit('r')" class="sign-up-form">
               <h2 class="title">Register</h2>
               <div class="input-field">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Username" />
+                  <input formControlName="user" type="text" placeholder="Username" />
               </div>
               <div class="input-field">
                   <i class="fas fa-envelope"></i>
-                  <input type="email" placeholder="Email" />
+                  <input formControlName="email" type="email" placeholder="Email" />
               </div>
               <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Password" />
+                  <input formControlName="pswd" type="password" placeholder="Password" />
               </div>
               <input type="submit" class="btn" value="Sign up" />
-              <p class="social-text">Or Register with social platforms</p>
+              <!-- <p class="social-text">Or Register with social platforms</p>
               <div class="social-media">
                   <a href="#" class="social-icon">
                       <i class="fab fa-google"></i>
@@ -45,7 +54,7 @@
                   <a href="#" class="social-icon">
                       <i class="fab fa-linkedin-in"></i>
                   </a>
-              </div>
+              </div> -->
           </form>
       </div>
   </div>

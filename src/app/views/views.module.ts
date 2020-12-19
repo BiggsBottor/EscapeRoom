@@ -1,28 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
-import { GamesComponent } from './components/games/games.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
-import { GameComponent } from './components/game/game.component';
-import { LobbyComponent } from './components/lobby/lobby.component';
 
+// -- SLICK COROUSEL CONFIG MODULE -- //
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+// -- COMPONENTS -- //
+import { HomeComponent } from './components/home/home.component';
+// import { GamesComponent } from './components/games/games.component';
+// import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+// import { GameComponent } from './components/game/game.component';
+// import { LobbyComponent } from './components/lobby/lobby.component';
+
+// -- MODULES -- //
+import { SharedModule } from '../shared/shared.module';
+import { ViewsRoutingModule } from './views-routing.module'
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    GamesComponent,
-    LoginComponent,
-    RegisterComponent,
-    ContactComponent,
+    // GamesComponent,
+    // ContactComponent,
     AboutComponent,
-    GameComponent,
-    LobbyComponent],
+    // GameComponent,
+    // LobbyComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    ViewsRoutingModule,
+    SlickCarouselModule
   ]
 })
 export class ViewsModule { }

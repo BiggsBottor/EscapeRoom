@@ -1,0 +1,41 @@
+<!-- NAVBAR -->
+<nav class="theme_navbar position-relative" [ngClass]="{open: toggle}">
+  <div class="container">
+    <div class="navbar_content d-flex align-items-center justify-content-between position-relative">
+      <!-- logo -->
+      <h2>Escape Room </h2>
+      <!-- links -->
+      <ul class="navbar_links list-unstyled order-2 mb-0 d-lg-flex align-items-center text-uppercase">
+        <li class="navbar_link">
+          <a href="#" class="d-block">home</a>
+        </li>
+        <li class="navbar_link">
+          <a href="#" class="d-block">juegos</a>
+        </li>
+        <li class="navbar_link">
+          <a href="#" class="d-block">sobre nosotros</a>
+        </li>
+         <li class="navbar_link">
+          <a href="#" class="d-block">testimonials</a>
+        </li>
+        <li class="navbar_link">
+          <a href="#" class="d-block">contacto</a>
+        </li>
+        <li class="navbar_link">
+          <a href="#" class="d-block">login</a>
+        </li>
+        <li class="navbar_link">
+          <a href="#" class="d-block">registrar</a>
+        </li>
+      </ul>
+      <!-- toggler -->
+      <button (click)="toggleMenu()"
+              class="navbar_toggler order-lg-3 order-1 d-lg-none d-inline-flex flex-column align-items-start justify-content-between"
+              id="navbar_toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>

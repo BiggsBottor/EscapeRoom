@@ -1,0 +1,49 @@
+/* PRIMARY FILL BUTTON */
+.theme_primary_fill_btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff !important;
+	border: 1px solid var(--green);
+	background: var(--green);
+	min-width: 165px;
+	transition: all .25s;
+	&:hover {
+		background: var(--blue);
+		border-color: var(--blue);
+	}
+}
+/* PRIMARY TRANSPARENT BUTTOM */
+.theme_primary_transparent_btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff !important;
+	border: 1px solid rgba(255, 255, 255, .1);
+	background: rgba(255, 255, 255, .1);
+	min-width: 165px;
+	transition: all .25s;
+	i {
+		color: var(--green);
+		transition: all .25s;
+	}
+	&:hover {
+		border-color: var(--green);
+		background: rgba(41, 199, 173, 0.1);
+	}
+}
+@media (max-width: 767.98px) {
+	.theme_primary_fill_btn {
+		width: 100%;
+	}
+	.theme_primary_transparent_btn {
+		width: 100%;
+	}
+}
+

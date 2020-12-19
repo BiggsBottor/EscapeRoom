@@ -1,0 +1,42 @@
+/* HEADER */
+.main_header {
+	padding: 100px 0 0;
+	.header_title {
+		color: #fff;
+		font-size: 56px;
+		font-weight: 900;
+		font-family: 'Montserrat', sans-serif;
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: -20px;
+			height: 7px;
+			width: 80px;
+			background: #fff;
+		}
+	}
+	.header_subtitle {
+		font-size: 16px;
+		color: #CCC;
+		font-weight: lighter;
+	}
+}
+@media (max-width: 1199.98px) {
+	.main_header {
+		.header_title {
+			font-size: 44px;
+		}
+	}
+}
+@media (max-width: 767.98px) {
+	.main_header {
+		.header_title {
+			&::before {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+

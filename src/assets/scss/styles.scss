@@ -1,0 +1,68 @@
+// -- IMPORTS -- //
+
+// ** VIEWS ** //
+@import './views/login';
+@import './views/home';
+
+// ** THEME ** //
+@import './theme/buttons';
+@import './theme/colors';
+@import './theme/fonts';
+@import './theme/footer';
+@import './theme/header';
+@import './theme/margins-paddings';
+@import './theme/navbar';
+@import './theme/scrollbar';
+
+// ** VENDORS ** //
+@import 'aos/dist/aos';
+@import './../vendors/css/bootstrap.min.css';
+@import './../vendors/css/font-awesome.min.css';
+@import 'slick-carousel/slick/slick';
+// @import 'slick-carousel/slick/slick-theme';
+
+/* MAIN PROPERTIES */
+*:not(i) {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+html {
+  overflow-x: hidden;
+  min-height: 2000px;
+}
+body {
+  font-size: 14px;
+  background: var(--dark);
+  color: #fff;
+}
+a, button, input, textarea {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+a, button {
+  cursor: pointer;
+}
+p {
+  line-height: 1.7;
+}
+
+/* BACKGROUNDS */
+.bg_2 {
+  background: rgba(255, 255, 255, .02);
+}
+
+/* SIGN UP BAR */
+.sign_up_bar h1 {
+  color: #fff;
+  font-weight: 900;
+}
+@media (max-width: 991.98px) {
+  .sign_up_bar h1 {
+    font-size: 36px;
+  }
+}
