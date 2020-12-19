@@ -4,27 +4,27 @@ import { CommonModule } from '@angular/common';
 // -- SLICK COROUSEL CONFIG MODULE -- //
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
-// -- COMPONENTS -- //
-import { HomeComponent } from './components/home/home.component';
-// import { GamesComponent } from './components/games/games.component';
-// import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './components/about/about.component';
-// import { GameComponent } from './components/game/game.component';
-// import { LobbyComponent } from './components/lobby/lobby.component';
-
 // -- MODULES -- //
 import { SharedModule } from '../shared/shared.module';
-import { ViewsRoutingModule } from './views-routing.module'
+import { ViewsRoutingModule } from './views-routing.module';
+
+// -- COMPONENTS -- //
+import { HomeComponent } from './components/home/home.component';
+import { GamesComponent } from './components/games/games.component';
+import { GameNavbarComponent } from './components/games/game-navbar/game-navbar.component';
+import { InstructionsComponent } from './components/games/instructions/instructions.component';
+import { RoomComponent } from './components/games/room/room.component';
+import { ChatComponent } from './components/games/chat/chat.component'
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    // GamesComponent,
-    // ContactComponent,
-    AboutComponent,
-    // GameComponent,
-    // LobbyComponent
+    GamesComponent,
+    GameNavbarComponent,
+    InstructionsComponent,
+    RoomComponent,
+    ChatComponent
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,28 @@
-<p>games works!</p>
+<app-game-navbar></app-game-navbar>
+
+<!-- SE VII -->
+<!-- TODO:GAME- 5 rooms -->
+<section class="se_vii py_80" id="game">
+  <div class="container">
+    <div class="section_title">
+      <div class="row align-items-end">
+        <div class="col mb-lg-0 mb-2" data-aos="zoom-in-right" data-aos-delay="100">
+          <h3 class="title mb-0">EscapeRoom<br></h3>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    <canvas id="clockCanvas" width="80%" height="80%">
+      <audio id="alarmBeep"> <source src="#" /> </audio>
+      <p> <a href="#" id="setAlarm" class="button">Countdown</a></p>
+    </canvas>
+
+    <!-- TODO:CHAT -->
+    <!-- <app-chat></app-chat> -->
+
+    <!-- buttons -->
+    <!-- <div class="buttons d-flex align-items-center justify-content-center" data-aos="zoom-in-up" data-aos-delay="300">
+      <a href="#" class="theme_primary_fill_btn text-uppercase">Empezar</a>
+    </div> -->
+  </div>
+</section>
